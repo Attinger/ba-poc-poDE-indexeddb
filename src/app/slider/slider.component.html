@@ -1,0 +1,9 @@
+<p-grid>
+	<p-grid-item [size]="12">
+		<swiper #swiper [config]="config">
+			<ng-template swiperSlide *ngFor="let slide of imgSrc; let i = index;">
+				<img [src]="slide.url">
+			</ng-template>
+		</swiper>
+	</p-grid-item>
+</p-grid>
