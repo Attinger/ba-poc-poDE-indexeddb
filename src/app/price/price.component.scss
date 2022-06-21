@@ -1,0 +1,12 @@
+.padding-5 {
+  @media(min-width:1280px) {
+    padding:0 125px;
+  }
+}
+
+.price-input {
+  @media(min-width:1280px) {
+    font-size:25px;
+    padding-left:25px;
+  }
+}

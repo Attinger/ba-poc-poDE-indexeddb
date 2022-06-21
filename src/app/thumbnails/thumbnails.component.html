@@ -1,0 +1,51 @@
+<p-grid>
+	<p-grid-item size="12">
+		<p-accordion
+				heading="Serienfarbe"
+				tag="h2"
+				[size]="'medium'"
+				[open]="isAccordion1Open"
+				(accordionChange)="onAccordion1Change($event)"
+		>
+			<p-text>Serie</p-text>
+			<p-grid
+					class="thumbnail--row"
+			>
+				<div class="thumbnail--col" *ngFor="let thumbnail of serialThumbnail; let i = index;">
+					<div class="thumbnail"
+					     [ngStyle]="{'background-color':thumbnail.color}"
+					     [ngClass]="{'thumbnail--selected': thumbnail.selected === true}"
+					     *ngIf="thumbnail.price === 0"
+					>
+						<span class="checkmark" *ngIf="thumbnail.selected === true">
+							<div class="checkmark_circle"></div>
+							<div class="checkmark_stem"></div>
+							<div class="checkmark_kick"></div>
+						</span>
+					</div>
+				</div>
+			</p-grid>
+			<div class="m-2"></div>
+			<p-text>Metal</p-text>
+			<div class="m-2"></div>
+			<p-grid
+					class="thumbnail--row"
+			>
+				<div class="thumbnail--col" *ngFor="let thumbnail of metalThumbnail; let i = index;">
+					<div class="thumbnail"
+					     [ngStyle]="{'background-color':thumbnail.color}"
+					     [ngClass]="{'thumbnail--selected': thumbnail.selected === true}"
+					>
+						<span class="checkmark" *ngIf="thumbnail.selected === true">
+							<div class="checkmark_circle"></div>
+							<div class="checkmark_stem"></div>
+							<div class="checkmark_kick"></div>
+						</span>
+					</div>
+				</div>
+			</p-grid>
+			<div class="m-2"></div>
+		</p-accordion>
+	</p-grid-item>
+</p-grid>
+

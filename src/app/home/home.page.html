@@ -1,0 +1,30 @@
+<div class="pageLayout">
+  <p-grid>
+    <p-grid-item size="12">
+      <p-headline
+        variant="headline-2"
+        [align]="'center'"
+      >
+        Bachelor Thesis PoC, Attinger Kevin
+      </p-headline>
+      <p-divider class="divider"></p-divider>
+    </p-grid-item>
+    <p-grid-item size="6">
+      <p-headline variant="headline-3" class="padding-5">718 Cayman</p-headline>
+    </p-grid-item>
+    <p-grid-item size="6" class="flex-end">
+      <app-price></app-price>
+    </p-grid-item>
+
+    <p-grid-item [size]="{ base: 12, m: 7 }">
+      <app-slider [otherCarColor]="message"></app-slider>
+    </p-grid-item>
+    <p-grid-item [size]="{ base: 12, m: 5 }">
+      <app-thumbnails (changeColorEvent)="receiveMessage($event, price)"></app-thumbnails>
+      <app-exterieur (priceEvent)="receivePrice()"></app-exterieur>
+      <app-light (priceEvent)="receivePrice()"></app-light>
+      <app-multiselect (priceEvent)="receivePrice()"></app-multiselect>
+      <app-optionselect (priceEvent)="receivePrice()"></app-optionselect>
+    </p-grid-item>
+  </p-grid>
+</div>

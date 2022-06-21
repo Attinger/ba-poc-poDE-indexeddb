@@ -1,0 +1,35 @@
+@import '~swiper/swiper-bundle.css';
+
+.pageLayout {
+  margin-bottom: 2rem;
+  overflow-x:hidden;
+  padding:0 15px;
+
+  @media(min-width:1280px) {
+    padding:0 25px;
+  }
+}
+
+.removeLinkStyle {
+  text-decoration: none;
+  outline: none;
+}
+
+.divider {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.contentWrapperSmall {
+  margin-top: 1rem;
+}
+.contentWrapperBig {
+  margin-top: 2rem;
+}
+
+.full-width {
+  width:100%;
+}
+.xl-padding {
+  padding:0 30px;
+}

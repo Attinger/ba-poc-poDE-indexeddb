@@ -1,0 +1,36 @@
+<p-grid>
+	<p-grid-item size="12">
+		<p-accordion
+				heading="Light"
+				tag="h2"
+				[size]="'medium'"
+				[open]="isAccordion1Open"
+				(accordionChange)="onAccordion1Change($event)"
+		>
+			<p-grid
+				class=""
+				*ngFor="let config of lightConf; let i = index;"
+			>
+				<p-grid-item [size]="1">
+					<input
+						class="form-check-input"
+						type="checkbox"
+						[checked]="config.selected"
+						name="flexRadioDefault"
+						id="flexRadioDefault1"
+					>
+				</p-grid-item>
+				<p-grid-item [size]="11">
+					<p-text [size]="'small'">
+						<blockquote>{{config.title}}<small> / {{config.subtitle}}</small></blockquote>
+					</p-text>
+				</p-grid-item>
+				<p-grid-item [size]="12" [offset]="11">
+					<p-text [size]="'small'">
+						{{config.price}}€
+					</p-text>
+				</p-grid-item>
+			</p-grid>
+		</p-accordion>
+	</p-grid-item>
+</p-grid>
