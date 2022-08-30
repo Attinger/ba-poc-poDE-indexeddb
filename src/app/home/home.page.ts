@@ -16,9 +16,14 @@ export class HomePage {
   price: number;
   initialPrice: number;
   message: string;
+  quota: number;
 
   async ngOnInit() {
-    this.receivePrice()
+    this.receivePrice();
+    const quota = await navigator.storage.estimate();
+    const totalSpace = quota.quota;
+    this.quota = totalSpace;
+    console.log(totalSpace);
   }
 
   receivePrice() {

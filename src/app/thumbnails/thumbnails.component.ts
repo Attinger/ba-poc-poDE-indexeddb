@@ -75,7 +75,7 @@ export class ThumbnailsComponent implements OnInit {
   }
 
   async getDataFromApi() {
-    const url = 'https://4einhalb.com/wordpress/wp-content/uploads/2022/06/serialthumb.json';
+    const url = 'https://d36v07xmmuuq9w.cloudfront.net/serialthumb.json';
     try {
       const res = await fetch(url);
       return await res.json();
@@ -85,7 +85,7 @@ export class ThumbnailsComponent implements OnInit {
   }
 
   async getDataFromApiMetal() {
-    const url = 'https://4einhalb.com/wordpress/wp-content/uploads/2022/06/metalthumb.json';
+    const url = 'https://d36v07xmmuuq9w.cloudfront.net/metalthumb.json';
     try {
       const res = await fetch(url);
       return await res.json();

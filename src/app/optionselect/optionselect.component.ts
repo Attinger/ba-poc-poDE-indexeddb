@@ -80,7 +80,7 @@ export class OptionselectComponent implements OnInit {
   }
 
   async getDataFromApi() {
-    const url = 'https://4einhalb.com/wordpress/wp-content/uploads/2022/06/optionselect.json';
+    const url = 'https://d36v07xmmuuq9w.cloudfront.net/optionselect.json';
     try {
       const res = await fetch(url);
       return await res.json();

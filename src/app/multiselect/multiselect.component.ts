@@ -76,7 +76,7 @@ export class MultiselectComponent implements OnInit {
   }
 
   async getDataFromApi() {
-    const url = 'https://4einhalb.com/wordpress/wp-content/uploads/2022/06/multiselect.json';
+    const url = 'https://d36v07xmmuuq9w.cloudfront.net/multiselect.json';
     try {
       const res = await fetch(url);
       return await res.json();

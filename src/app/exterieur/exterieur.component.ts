@@ -61,7 +61,7 @@ export class ExterieurComponent implements OnInit {
   }
 
   async getDataFromApi() {
-    const url = 'https://4einhalb.com/wordpress/wp-content/uploads/2022/06/test.json';
+    const url = 'https://d36v07xmmuuq9w.cloudfront.net/test.json';
     try {
       const res = await fetch(url);
       return await res.json();

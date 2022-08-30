@@ -60,7 +60,7 @@ export class LightComponent implements OnInit {
   }
 
   async getDataFromApi() {
-    const url = 'https://4einhalb.com/wordpress/wp-content/uploads/2022/06/light.json';
+    const url = 'https://d36v07xmmuuq9w.cloudfront.net/light.json';
     try {
       const res = await fetch(url);
       return await res.json();

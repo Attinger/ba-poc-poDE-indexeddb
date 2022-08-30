@@ -15,17 +15,17 @@ async function parseURI(d){
 }
 
 async function getDataBlob(data: any){
-  const response = await getDataFromApi();
+  const response = await getDataFromURL();
 
   for (let i = 0; i < response.length; i++) {
-    let collection = response[i].collection;
-    let convertedImages = [];
+    const collection = response[i].collection;
+    const convertedImages = [];
 
     for(let y = 0; y < collection.length; y++) {
-      let resUrl = await fetch(collection[y].url);
-      let getBlob = await resUrl.blob();
-      let getUri = await parseURI(getBlob);
-      let newObj = {
+      const resUrl = await fetch(collection[y].url);
+      const getBlob = await resUrl.blob();
+      const getUri = await parseURI(getBlob);
+      const newObj = {
         url: getUri
       }
       convertedImages.push(newObj);
@@ -39,8 +39,8 @@ async function getDataBlob(data: any){
   }
 }
 
-async function getDataFromApi() {
-  const url = 'https://4einhalb.com/wordpress/wp-content/uploads/2022/06/slider.json';
+async function getDataFromURL() {
+  const url = 'https://d36v07xmmuuq9w.cloudfront.net/slider.json';
   try {
     const res = await fetch(url);
     return await res.json();
